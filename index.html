@@ -1,152 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        /* Basic CSS for navbar */
-        body {
-          font-family: Arial, sans-serif;
-          background-color: #fef5ec;
-          margin: 0;
-          padding: 0;
+      /* Basic CSS for navbar */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fef5ec;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        background-color: #ffffff;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 40px 0px 40px;
+        align-items: center;
+        height: 80px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: larger;
+      }
+      .navbar a:hover {
+        background-color: #ffffff;
+        color: #ff8b1e;
+        border-radius: 15px;
+      }
+      .navbar .logo {
+        float: left;
+        display: block;
+        padding: 10px;
+        margin-right: 10px;
+      }
+      .navbar .avatar {
+        float: right;
+        display: block;
+        padding: 10px;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #e6e7eb;
+        border-radius: 15px;
+        cursor: pointer; /* Add cursor pointer to indicate clickable */
+      }
+
+      .navbar .avatar:hover {
+        border: 2px solid orange;
+        cursor: pointer;
+      }
+      .navbar .additional-menu {
+        display: none; /* Initially hide the additional menu */
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 10px;
+        top: 80px;
+        border-radius: 10px;
+      }
+      .navbar .additional-menu a {
+        float: none;
+        display: block;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+      }
+
+      /* CSS FOR SECTION TAG GOES HERE */
+
+      .section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 120px 50px 120px;
+      }
+      .section-container .text-side {
+        flex: 1;
+        padding-right: 20px;
+      }
+      .section-container .text-side h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .section-container .text-side p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+      }
+      .section-container .image-side {
+        flex: 1;
+        text-align: center;
+      }
+      .section-container .image-side img {
+        width: 600px;
+        height: auto;
+      }
+
+      /* CSS for 2nd last section */
+
+      .explore-sri-mandir {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .features {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+
+      .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .feature p {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      .media-outlets {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .media-outlets img {
+        width: 300px;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .features {
+          flex-direction: column;
         }
-        .navbar {
-          background-color: #ffffff;
-          overflow: hidden;
-          display: flex;
-          justify-content: space-between;
-          padding: 0px 40px 0px 40px;
-          align-items: center;
-          height: 80px;
-        }
-        .navbar a {
-          float: left;
-          display: block;
-          color: #000000;
-          text-align: center;
-          padding: 14px 20px;
-          text-decoration: none;
-          font-size: larger;
-        }
-        .navbar a:hover {
-          background-color: #ffffff;
-          color: #ff8b1e;
-          border-radius: 15px;
-        }
-        .navbar .logo {
-          float: left;
-          display: block;
-          padding: 10px;
-          margin-right: 10px;
-        }
-        .navbar .avatar {
-          float: right;
-          display: block;
-          padding: 10px;
-          margin-left: 10px;
-          width: 30px;
-          height: 30px;
-          border: 2px solid #e6e7eb;
-          border-radius: 15px;
-          cursor: pointer; /* Add cursor pointer to indicate clickable */
-        }
-        .navbar .additional-menu {
-          display: none; /* Initially hide the additional menu */
-          position: absolute;
-          background-color: #fff;
-          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-          z-index: 1;
-          right: 10px;
-          top: 80px;
-        }
-        .navbar .additional-menu a {
-          float: none;
-          display: block;
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          text-align: left;
+      }
+
+      /* CSS for last section goes here */
+
+      .download-app-section {
+        text-align: center;
+        padding: 40px;
+        background-color: #fff;
+      }
+
+      .download-app-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .download-app-text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .download-app-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .download-buttons {
+        display: flex;
+        justify-content: left;
+        gap: 20px;
+      }
+
+      .download-buttons img {
+        width: 200px;
+        height: auto;
+      }
+
+      .download-app-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .download-app-footer {
+        background-color: #ff6b00;
+        color: white;
+        padding: 25px;
+        margin-top: -45px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .footer-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .footer-nav a:hover {
+        text-decoration: underline;
+      }
+
+      .download-app-footer p {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .download-app-content {
+          flex-direction: column;
         }
 
-        /* CSS FOR SECTION TAG GOES HERE */
+        .download-buttons img {
+          width: 120px;
+        }
 
-        .section-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px 120px 50px 120px;
+        .footer-content {
+          flex-direction: column;
         }
-        .section-container .text-side {
-            flex: 1;
-            padding-right: 20px;
+
+        .footer-nav {
+          justify-content: center;
         }
-        .section-container .text-side h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .section-container .text-side p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #666;
-        }
-        .section-container .image-side {
-            flex: 1;
-            text-align: center;
-        }
-        .section-container .image-side img {
-            width: 600px;
-            height: auto;
-        }
-      </style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <div class="navbar">
       <div>
-        <img src="./assets/Screenshot__1401_-removebg-preview.png" style="width: 200px;" alt="Logo" height="60">
+        <img
+          src="./assets/Screenshot__1401_-removebg-preview.png"
+          style="width: 200px"
+          alt="Logo"
+          height="60"
+        />
       </div>
-        <div>
+      <div>
         <a href="./index.html">Home</a>
         <a href="#">Puja</a>
         <a href="#">Panchang</a>
         <a href="#">Temples</a>
         <a href="#">Library</a>
-        </div>
+      </div>
 
-        <div>
-          <a href="#" class="avatar"><img src="./assets/avatar.svg" alt=""></a>
-          <div class="additional-menu" id="additionalMenu">
-            <a style="font-size: small;" for=""> <b>Account Details</b></a>
-            <a href="#">My profile</a>
-            <a href="./pujabookingpage.html">My Puja Bookings</a>
-            <a href="#">My Ramotsav Bookings</a>
-            <a href="#">Book a Puja</a>
+      <div>
+        <a href="#" class="avatar"><img src="./assets/avatar.svg" alt="" /></a>
+        <div class="additional-menu" id="additionalMenu">
+          <a style="font-size: small" for=""> <b>Account Details</b></a>
+          <a href="#">My profile</a>
+          <a href="./pujabookingpage.html">My Puja Bookings</a>
+          <a href="#">My Ramotsav Bookings</a>
+          <a href="#">Book a Puja</a>
+          <hr style="border: 1px solid rgb(234, 234, 234);">
+          <h4 style="padding:  12px 16px; margin-top: 0px; font-size: small; color: #666;">Help & Support for Puja Booking</h4>
+          <div style="display: flex; gap: 10px; padding: 12px; text-align: left;margin-top: -40px;">
+            <img src="./assets/ic_action_help_call.svg" alt="">
+            <div>
+              <h5>+91 4552187006</h5>
+            <p style="font-size: small; margin-top: -15px;"> Call us from 10:30 AM - 7:30 AM</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 5px; margin-top: -30px; padding: 12px 16px;">
+            <div style="display: flex; gap: 5px; padding: 10px;">
+              <img src="./assets/ic_action_help_mail.svg" alt="">
+              <P>Email Us</P>
+            </div>
+
+            <div style="display: flex; gap: 5px; padding: 10px;">
+              <img src="./assets/ic_action_help_whats_app.svg" alt="">
+              <P>WhatsApp Us</P>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <section class="section-container">
-        <div class="text-side">
-            <p style="font-size: larger; color: #837166;">WORLD’S LARGEST APP FOR HINDU DEVOTEES</p>
-            <h1 style="font-size: 40px; margin-top: -10px;">Pray daily with <span style="color: #ff8b1e;">Sri Mandir.</span><br>One App for all your <br><span style="color: #ff8b1e;">devotional</span> needs.</h1>
-            <div>
-              <img src="./assets/img_playstore_logo.svg" alt="" srcset="">
-              <img style="margin-left: 10px;" src="./assets/img_playstore_logo.svg" alt="" srcset="">
-            </div>
+    <section class="section-container">
+      <div class="text-side">
+        <p style="font-size: larger; color: #837166">
+          WORLD’S LARGEST APP FOR HINDU DEVOTEES
+        </p>
+        <h1 style="font-size: 40px; margin-top: -10px">
+          Pray daily with <span style="color: #ff8b1e">Sri Mandir.</span
+          ><br />One App for all your <br /><span style="color: #ff8b1e"
+            >devotional</span
+          >
+          needs.
+        </h1>
+        <div>
+          <img src="./assets/img_playstore_logo.svg" alt="" srcset="" />
+          <img
+            style="margin-left: 10px"
+            src="./assets/img_playstore_logo.svg"
+            alt=""
+            srcset=""
+          />
         </div>
-        <div class="image-side">
-            <img src="./assets/img_hero_artwork_en (2).webp" alt="Image Description">
-        </div>
+      </div>
+      <div class="image-side">
+        <img
+          src="./assets/img_hero_artwork_en (2).webp"
+          alt="Image Description"
+        />
+      </div>
     </section>
-</body>
+
+    <section style="background-color: white" class="explore-sri-mandir">
+      <h1 style="font-size: 35px">Explore Sri Mandir</h1>
+      <div class="features">
+        <div class="feature">
+          <img src="./assets/ic_puja_seva.svg" alt="Book Pujas at Temples" />
+          <p>
+            Book Pujas at <br />
+            Temples
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_astro.svg" alt="Talk to Astrologers" />
+          <p>
+            Talk to <br />
+            Astrologers
+          </p>
+        </div>
+        <div class="feature">
+          <img
+            src="./assets/ic_chadhava_seva.svg"
+            alt="Offer Chadhava at Temples"
+          />
+          <p>
+            Offer Chadhava at <br />
+            Temples
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_festivals.svg" alt="Read Festival Details" />
+          <p>
+            Read Festival <br />
+            Details
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_music.svg" alt="Listen to Divine Music" />
+          <p>
+            Listen to <br />
+            Divine Music
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_mandir_darshan.svg" alt="Do Mandir Darshan" />
+          <p>Do Mandir Darshan</p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_sahitya.svg" alt="Read Hindu Literature" />
+          <p>
+            Read Hindu <br />
+            Literature
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/ic_panchang.svg" alt="Read Panchang" />
+          <p>Read Panchang</p>
+        </div>
+      </div>
+      <h1 style="font-size: 35px; margin-top: 80px">
+        Our Divine Mission recognised by Prominent Media Outlets
+      </h1>
+      <div class="media-outlets">
+        <img src="./assets/img_link_01.webp" alt="mid-day" />
+        <img src="./assets/img_link_02.webp" alt="yourstory" />
+        <img src="./assets/img_link_03.webp" alt="businessworld" />
+        <img src="./assets/img_link_04.webp" alt="abp live" />
+      </div>
+    </section>
+
+    <section class="download-app-section">
+      <div class="download-app-content">
+        <div class="download-app-text">
+          <h2 style="font-size: 40px; text-align: left">
+            Download Sri Mandir app now !!
+          </h2>
+          <p style="font-size: 25px; text-align: left">
+            Connect to your beloved God, anytime, anywhere!
+          </p>
+          <div class="download-buttons">
+            <a href="#"
+              ><img
+                src="./assets/img_playstore_logo.svg"
+                alt="Get it on Google Play"
+            /></a>
+            <a href="#"
+              ><img
+                src="./assets/img_playstore_logo.svg"
+                alt="Download on the App Store"
+            /></a>
+          </div>
+        </div>
+        <div class="download-app-image">
+          <img src="./assets/img_showcase_section_family.webp" alt="Family" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="download-app-footer">
+      <div class="footer-content">
+        <img
+          style="width: 150px"
+          src="./assets/Screenshot__1401_-removebg-preview.png"
+          alt="Sri Mandir Logo"
+        />
+        <nav class="footer-nav">
+          <a href="#">ABOUT US</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+          <a href="#">PRIVACY POLICY</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
 
 <script>
   // JavaScript to show/hide additional menu
-  document.querySelector('.avatar').addEventListener('click', function() {
-      var menu = document.getElementById('additionalMenu');
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  document.querySelector(".avatar").addEventListener("click", function () {
+    var menu = document.getElementById("additionalMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
   });
 </script>

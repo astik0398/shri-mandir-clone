@@ -7,70 +7,72 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <style>
-             body {
-          font-family: Arial, sans-serif;
-          background-color: #fef5ec;
-          margin: 0;
-          padding: 0;
-        }
-        .navbar {
-          background-color: #ffffff;
-          overflow: hidden;
-          display: flex;
-          justify-content: space-between;
-          padding: 0px 40px 0px 40px;
-          align-items: center;
-          height: 80px;
-        }
-        .navbar a {
-          float: left;
-          display: block;
-          color: #000000;
-          text-align: center;
-          padding: 14px 20px;
-          text-decoration: none;
-          font-size: larger;
-        }
-        .navbar a:hover {
-          background-color: #ffffff;
-          color: #ff8b1e;
-          border-radius: 15px;
-        }
-        .navbar .logo {
-          float: left;
-          display: block;
-          padding: 10px;
-          margin-right: 10px;
-        }
-        .navbar .avatar {
-          float: right;
-          display: block;
-          padding: 10px;
-          margin-left: 10px;
-          width: 30px;
-          height: 30px;
-          border: 2px solid #e6e7eb;
-          border-radius: 15px;          cursor: pointer; /* Add cursor pointer to indicate clickable */
-        }
-        .navbar .additional-menu {
-          display: none; /* Initially hide the additional menu */
-          position: absolute;
-          background-color: #fff;
-          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-          z-index: 1;
-          right: 10px;
-          top: 80px;
-        }
-        .navbar .additional-menu a {
-          float: none;
-          display: block;
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          text-align: left;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fef5ec;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #ffffff;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 40px 0px 40px;
+      align-items: center;
+      height: 80px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: larger;
+    }
+    .navbar a:hover {
+      background-color: #ffffff;
+      color: #ff8b1e;
+      border-radius: 15px;
+    }
+    .navbar .logo {
+      float: left;
+      display: block;
+      padding: 10px;
+      margin-right: 10px;
+    }
+    .navbar .avatar {
+      float: right;
+      display: block;
+      padding: 10px;
+      margin-left: 10px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e6e7eb;
+      border-radius: 15px;
+      cursor: pointer; /* Add cursor pointer to indicate clickable */
+    }
+    .navbar .additional-menu {
+      display: none; /* Initially hide the additional menu */
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      right: 10px;
+      top: 80px;
+    }
+    .navbar .additional-menu a {
+      float: none;
+      display: block;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      text-align: left;
+    }
 
-        /* CSS for code after navbar goes here */
+    /* CSS for code after navbar goes here */
 
     .header-content {
       display: flex;
@@ -131,11 +133,11 @@
       transition: background-color 0.3s;
     }
 
-    .navigation a:hover{
+    .navigation a:hover {
       color: #ff8b1e;
     }
 
-    main{
+    main {
       margin: auto;
       width: 90%;
     }
@@ -207,7 +209,7 @@
       margin-bottom: 10px;
     }
 
-    #package-ul li{
+    #package-ul li {
       margin-top: 10px;
     }
 
@@ -221,7 +223,7 @@
       height: auto;
     }
 
-    .testimonial{
+    .testimonial {
       background-color: #e0e0e0;
       padding: 25px;
       border-radius: 20px;
@@ -245,49 +247,71 @@
     }
   </style>
   <body>
-
     <div class="navbar">
       <div>
-        <img src="./assets/Screenshot__1401_-removebg-preview.png" style="width: 200px;" alt="Logo" height="60">
+        <img
+          src="./assets/Screenshot__1401_-removebg-preview.png"
+          style="width: 200px"
+          alt="Logo"
+          height="60"
+        />
       </div>
-        <div>
+      <div>
         <a href="./index.html">Home</a>
         <a href="#">Puja</a>
         <a href="#">Panchang</a>
         <a href="#">Temples</a>
         <a href="#">Library</a>
-        </div>
+      </div>
 
-        <div>
-          <a href="#" class="avatar"><img src="./assets/avatar.svg" alt=""></a>
-          <div class="additional-menu" id="additionalMenu">
-            <a style="font-size: small;" for=""> <b>Account Details</b></a>
-            <a href="#">My profile</a>
-            <a href="#">My Puja Bookings</a>
-            <a href="#">My Ramotsav Bookings</a>
-            <a href="#">Book a Puja</a>
-          </div>
+      <div>
+        <a href="#" class="avatar"><img src="./assets/avatar.svg" alt="" /></a>
+        <div class="additional-menu" id="additionalMenu">
+          <a style="font-size: small" for=""> <b>Account Details</b></a>
+          <a href="#">My profile</a>
+          <a href="#">My Puja Bookings</a>
+          <a href="#">My Ramotsav Bookings</a>
+          <a href="#">Book a Puja</a>
         </div>
       </div>
+    </div>
 
     <header>
       <div class="header-content">
         <div class="puja-image">
-          <img src="./assets/1720847462092.webp" alt="Puja Image" />
+          <img
+            id="display-image"
+            src="./assets/1720847462092.webp"
+            alt="Puja Image"
+          />
         </div>
         <div class="puja-info">
-          <h1>Rahu-Guru Shanti Special Guru Chandali Dosha Nivaran Mahapuja</h1>
+          <h1 id="main-title">
+            Rahu-Guru Shanti Special Guru Chandali Dosha Nivaran Mahapuja
+          </h1>
           <p>For Prosperity and Material Well-Being</p>
           <p>At Shri Brihaspati Mandir, Kashi, Uttar Pradesh</p>
           <p><b>Puja Booking will close in</b></p>
           <div class="countdown-timer">
             <span>11</span>h : <span>12</span>m : <span>27</span>s
           </div>
-          <p style="font-size: 25px;">Till now <span style="color: #ff8b1e;"><b>2,00,000+Devotees</b></span> have participated in Pujas conducted by Sri Mandir Puja Seva.</p>
-          <button class="btn btn-green"><b><a style="text-decoration: none;color: white;" href="#puja-packages">Select Puja Package</a></b></button>
+          <p style="font-size: 25px">
+            Till now
+            <span style="color: #ff8b1e"><b>2,00,000+Devotees</b></span> have
+            participated in Pujas conducted by Sri Mandir Puja Seva.
+          </p>
+          <button class="btn btn-green">
+            <b
+              ><a
+                style="text-decoration: none; color: white"
+                href="#puja-packages"
+                >Select Puja Package</a
+              ></b
+            >
+          </button>
         </div>
       </div>
-      <hr>
+      <hr />
       <nav class="navigation">
         <a href="#about-puja">About Puja</a>
         <a href="#puja-benefits">Benefits</a>
@@ -296,7 +320,7 @@
         <a href="#puja-packages">Packages</a>
         <a href="#testimonials">Reviews</a>
       </nav>
-      <hr>
+      <hr />
     </header>
     <main>
       <section id="about-puja" class="about-puja">
@@ -305,7 +329,7 @@
           Pradosh-Stotrashtakam and Pradosh Vrat Katha For Resolving Conflicts
           in Relationships
         </h2>
-        <p style="color: #575757; font-size: large;">
+        <p style="color: #575757; font-size: large">
           The Pradosh Vrat is considered extremely auspicious and is believed to
           bestow the blessings of Lord Shiva in the Kali Yuga. This sacred
           festival occurs twice a month on the Trayodashi Tithi, and on this
@@ -414,11 +438,11 @@
           <img
             width="650px"
             height="450px"
-            style="border-radius: 25px; float: left;"
+            style="border-radius: 25px; float: left"
             src="./assets/1720847522313.webp"
             alt=""
           />
-          <p style="font-size: larger; color: #575757;">
+          <p style="font-size: larger; color: #575757">
             The fourth Jyotirlinga among the 12 Jyotirlingas of Lord Shiva is
             Shri Omkareshwar Jyotirlinga, considered a Swayambhu lingam. It is
             located in the Khandwa district of Madhya Pradesh on the island of
@@ -432,90 +456,174 @@
             river itself flows here in the shape of 'Om'. According to
             scriptures, merely visiting Omkareshwar Jyotirlinga can liberate one
             from all sins. The glory of the Omkareshwar Kshetra is mentioned in
-            the Skanda Purana, Shiva Purana, and Vayu Purana. <br> <br> According to a
-            mythological story, Lord Shiva comes here to rest at night after
-            wandering through all the three worlds. It is said that this is the
-            only temple on earth where Shiva and Parvati play the game of dice
-            every night. After the Shayan Aarti at night, a dice board is set up
-            here, and the Garbhgriha is closed. Surprisingly, even though no one
-            can enter the temple at night, the dice are found scattered every
-            day. This fact further enhances the religious significance of this
-            temple. This is why after visiting all other pilgrimages, a visit
-            and worship at Omkareshwar holds special importance. Pilgrims bring
-            water from all other holy places to offer at Omkareshwar, only then
-            are all pilgrimages considered complete; otherwise, they are
-            considered incomplete.
+            the Skanda Purana, Shiva Purana, and Vayu Purana. <br />
+            <br />
+            According to a mythological story, Lord Shiva comes here to rest at
+            night after wandering through all the three worlds. It is said that
+            this is the only temple on earth where Shiva and Parvati play the
+            game of dice every night. After the Shayan Aarti at night, a dice
+            board is set up here, and the Garbhgriha is closed. Surprisingly,
+            even though no one can enter the temple at night, the dice are found
+            scattered every day. This fact further enhances the religious
+            significance of this temple. This is why after visiting all other
+            pilgrimages, a visit and worship at Omkareshwar holds special
+            importance. Pilgrims bring water from all other holy places to offer
+            at Omkareshwar, only then are all pilgrimages considered complete;
+            otherwise, they are considered incomplete.
           </p>
         </div>
       </section>
       <section id="puja-packages" class="puja-packages">
         <h2>Select Puja Package</h2>
         <div class="packages-grid">
-          <div style="border: 1px solid orange;" class="package">
-            <h3 style="color: orange;">₹851</h3>
-            <p style="color: orange;">Individual Puja</p>
+          <div style="border: 1px solid orange" class="package">
+            <h3 style="color: orange">₹851</h3>
+            <p style="color: orange">Individual Puja</p>
             <p>Puja for 1 Person</p>
-            <ul id="package-ul" style="text-align: left; font-size: large; color: #575757">
-              <li>Pandit ji will call out your name and gotra during the puja sankalp.</li>
-              
-              <li>Opt for additional offerings like Vastra Daan, Anna Daan, Gau Seva, or Deep Daan to be done in your name.</li>
-              
-<li>              Upon completion, a video of your puja and offering will be shared with you on your registered WhatsApp number or can be found in your booking history within 3-4 days. .
-</li>              
-              <li>Sacred tirth prasad will be sent to your address within 8-10 days.</li></ul>
-            <button class="btn btn-green"><a style="text-decoration: none; color: white;" href="./reviewbookingpage.html">PARTICIPATE</a></button>
+            <ul
+              id="package-ul"
+              style="text-align: left; font-size: large; color: #575757"
+            >
+              <li>
+                Pandit ji will call out your name and gotra during the puja
+                sankalp.
+              </li>
+
+              <li>
+                Opt for additional offerings like Vastra Daan, Anna Daan, Gau
+                Seva, or Deep Daan to be done in your name.
+              </li>
+
+              <li>
+                Upon completion, a video of your puja and offering will be
+                shared with you on your registered WhatsApp number or can be
+                found in your booking history within 3-4 days. .
+              </li>
+              <li>
+                Sacred tirth prasad will be sent to your address within 8-10
+                days.
+              </li>
+            </ul>
+            <button class="btn btn-green">
+              <a
+                style="text-decoration: none; color: white"
+                href="./reviewbookingpage.html"
+                >PARTICIPATE</a
+              >
+            </button>
           </div>
-          <div style="border: 1px solid blue;" class="package">
-            <h3 style="color: blue;">₹1251</h3>
-            <p style="color: blue;">Partner Puja</p>
+          <div style="border: 1px solid blue" class="package">
+            <h3 style="color: blue">₹1251</h3>
+            <p style="color: blue">Partner Puja</p>
             <p>Puja for 2 Person</p>
-            <ul id="package-ul" style="text-align: left; font-size: large; color: #575757">
-              
-<li>Pandit ji will call out your name and gotra during the puja sankalp.</li>
+            <ul
+              id="package-ul"
+              style="text-align: left; font-size: large; color: #575757"
+            >
+              <li>
+                Pandit ji will call out your name and gotra during the puja
+                sankalp.
+              </li>
 
-<li>Opt for additional offerings like Vastra Daan, Anna Daan, Gau Seva, or Deep Daan to be done in your name.</li>
+              <li>
+                Opt for additional offerings like Vastra Daan, Anna Daan, Gau
+                Seva, or Deep Daan to be done in your name.
+              </li>
 
-<li>Upon completion, a video of your puja and offering will be shared with you on your registered WhatsApp number or can be found in your booking history within 3-4 days. .
-</li>
-<li>Sacred tirth prasad will be sent to your address within 8-10 days.</li></ul>
-            <button class="btn btn-green"><a style="text-decoration: none; color: white;" href="./reviewbookingpage.html">PARTICIPATE</a></button>
+              <li>
+                Upon completion, a video of your puja and offering will be
+                shared with you on your registered WhatsApp number or can be
+                found in your booking history within 3-4 days. .
+              </li>
+              <li>
+                Sacred tirth prasad will be sent to your address within 8-10
+                days.
+              </li>
+            </ul>
+            <button class="btn btn-green">
+              <a
+                style="text-decoration: none; color: white"
+                href="./reviewbookingpage.html"
+                >PARTICIPATE</a
+              >
+            </button>
           </div>
           <div style="border: 1px solid red" class="package">
-            <h3 style="color: red;">₹2001</h3>
-            <p style="color: red;">Family + Bhog</p>
+            <h3 style="color: red">₹2001</h3>
+            <p style="color: red">Family + Bhog</p>
             <p>Puja for 4 Person</p>
-            <ul id="package-ul" style="text-align: left; font-size: large; color: #575757">
-              
-
-<li>              Pandit ji will call out your name and gotra during the puja sankalp.
-</li>
-<li>              Bhog consisting of fruits, sweets, and dry fruits will be offered to Lord Shiva at Shri Omkareshwar Jyotirlinga Temple.
-</li>              
-<li>              Opt for additional offerings like Vastra Daan, Anna Daan, Gau Seva, or Deep Daan to be done in your name.
-</li>              
-<li>              Upon completion, a video of your puja and offering will be shared with you on your registered WhatsApp number or can be found in your booking history within 3-4 days.
-</li>              
-<li>              Sacred tirth prasad will be sent to your address within 8-10 days.
-</li>              </ul>
-            <button class="btn btn-green"><a style="text-decoration: none; color: white;" href="./reviewbookingpage.html">PARTICIPATE</a></button>
+            <ul
+              id="package-ul"
+              style="text-align: left; font-size: large; color: #575757"
+            >
+              <li>
+                Pandit ji will call out your name and gotra during the puja
+                sankalp.
+              </li>
+              <li>
+                Bhog consisting of fruits, sweets, and dry fruits will be
+                offered to Lord Shiva at Shri Omkareshwar Jyotirlinga Temple.
+              </li>
+              <li>
+                Opt for additional offerings like Vastra Daan, Anna Daan, Gau
+                Seva, or Deep Daan to be done in your name.
+              </li>
+              <li>
+                Upon completion, a video of your puja and offering will be
+                shared with you on your registered WhatsApp number or can be
+                found in your booking history within 3-4 days.
+              </li>
+              <li>
+                Sacred tirth prasad will be sent to your address within 8-10
+                days.
+              </li>
+            </ul>
+            <button class="btn btn-green">
+              <a
+                style="text-decoration: none; color: white"
+                href="./reviewbookingpage.html"
+                >PARTICIPATE</a
+              >
+            </button>
           </div>
-          <div style="border: 1px solid purple;" class="package">
-            <h3 style="color: purple;">₹3001</h3>
-            <p style="color: purple;">Joint Family + Bhog + Flower Basket</p>
+          <div style="border: 1px solid purple" class="package">
+            <h3 style="color: purple">₹3001</h3>
+            <p style="color: purple">Joint Family + Bhog + Flower Basket</p>
             <p>Puja for 6 Person</p>
-            <ul id="package-ul" style="text-align: left; font-size: large; color: #575757">
-              
-              
-<li>Pandit ji will call out your name and gotra during the puja sankalp.
-</li>
-<li>Bhog consisting of fruits, sweets, and dry fruits, will be offered to Lord Shiva at Shri Omkareshwar Jyotirlinga Temple along with floral tributes.
-</li>
-<li>Opt for additional offerings like Vastra Daan, Anna Daan, Gau Seva, or Deep Daan to be done in your name.
-</li>
-<li>Upon completion, a video of your puja and offering will be shared with you on your registered WhatsApp number or can be found in your booking history within 3-4 days.
-</li>
-<li>Sacred Tirth Prasad will be sent to your address within 8-10 days.</li></ul>
-            <button class="btn btn-green"><a style="text-decoration: none; color: white;" href="./reviewbookingpage.html">PARTICIPATE</a></button>
+            <ul
+              id="package-ul"
+              style="text-align: left; font-size: large; color: #575757"
+            >
+              <li>
+                Pandit ji will call out your name and gotra during the puja
+                sankalp.
+              </li>
+              <li>
+                Bhog consisting of fruits, sweets, and dry fruits, will be
+                offered to Lord Shiva at Shri Omkareshwar Jyotirlinga Temple
+                along with floral tributes.
+              </li>
+              <li>
+                Opt for additional offerings like Vastra Daan, Anna Daan, Gau
+                Seva, or Deep Daan to be done in your name.
+              </li>
+              <li>
+                Upon completion, a video of your puja and offering will be
+                shared with you on your registered WhatsApp number or can be
+                found in your booking history within 3-4 days.
+              </li>
+              <li>
+                Sacred Tirth Prasad will be sent to your address within 8-10
+                days.
+              </li>
+            </ul>
+            <button class="btn btn-green">
+              <a
+                style="text-decoration: none; color: white"
+                href="./reviewbookingpage.html"
+                >PARTICIPATE</a
+              >
+            </button>
           </div>
         </div>
       </section>
@@ -542,6 +650,11 @@
       </section>
     </main>
     <script>
+      document.querySelector(".avatar").addEventListener("click", function () {
+        var menu = document.getElementById("additionalMenu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
+
       document.querySelectorAll(".navigation a").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -550,6 +663,13 @@
           });
         });
       });
+
+      let lsData = JSON.parse(localStorage.getItem("selectedPuja"));
+
+      document.getElementById("display-image").src = lsData.image;
+      document.getElementById("display-image").style.height = "440px";
+
+      document.getElementById("main-title").innerText = lsData.title;
     </script>
   </body>
 </html>
