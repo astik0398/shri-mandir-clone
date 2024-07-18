@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePuja Page</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #fef5ec;
+          margin: 0;
+          padding: 0;
+        }
+        .navbar {
+          background-color: #ffffff;
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 40px 0px 40px;
+          align-items: center;
+          height: 80px;
+        }
+        .navbar a {
+          float: left;
+          display: block;
+          color: #000000;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          font-size: larger;
+        }
+        .navbar a:hover {
+          background-color: #ffffff;
+          color: #ff8b1e;
+          border-radius: 15px;
+        }
+        .navbar .logo {
+          float: left;
+          display: block;
+          padding: 10px;
+          margin-right: 10px;
+        }
+        .navbar .avatar {
+          float: right;
+          display: block;
+          padding: 10px;
+          margin-left: 10px;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          background-color: #dd0909;
+          cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+        .navbar .additional-menu {
+          display: none; /* Initially hide the additional menu */
+          position: absolute;
+          background-color: #fff;
+          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+          z-index: 1;
+          right: 10px;
+          top: 80px;
+        }
+        .navbar .additional-menu a {
+          float: none;
+          display: block;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          text-align: left;
+        }
+
+        /* CSS for section goes here */
+
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .header p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .banner {
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        .banner .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .puja-list {
+            padding: 20px;
+        }
+        .puja-list h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .puja-filter {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .puja-filter select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .puja-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .puja-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            /* width: calc(33% - 40px); */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .puja-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .puja-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .puja-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .puja-card .btn {
+            background-color: #ff8b1e;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .puja-card .btn:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+          <img src="./assets/Screenshot__1401_-removebg-preview.png" style="width: 200px;" alt="Logo" height="60">
+        </div>
+          <div>
+          <a href="#">Home</a>
+          <a href="#">Puja</a>
+          <a href="#">Panchang</a>
+          <a href="#">Temples</a>
+          <a href="#">Library</a>
+          </div>
+  
+          <div>
+            <a href="#" class="avatar"></a>
+            <div class="additional-menu" id="additionalMenu">
+              <a style="font-size: small;" for=""> <b>Account Details</b></a>
+              <a href="#">My profile</a>
+              <a href="#">My Puja Bookings</a>
+              <a href="#">My Ramotsav Bookings</a>
+              <a href="#">Book a Puja</a>
+            </div>
+          </div>
+        </div>
+
+    <section style="width: 90%; margin: auto;">
+        <div class="header">
+            <h1 style="text-align: left;">Perform your Puja as per Vedic rituals at Famous Hindu Temples in <br> India with Sri Mandir</h1>
+        </div>
+    
+        <div class="banner">
+            <img src="./assets/img_desktop_banner_devotees.webp" alt="Banner Image">
+        </div>
+    
+        <div class="puja-list">
+            <h2>Upcoming Pujas on Sri Mandir</h2>
+            <p>Book online puja with Sri Mandir in more than 500+ temples across India. Receive video of the puja along with the Prasad and receive blessings from the divine for prosperity and well-being of you and your family</p>
+            <div class="puja-filter">
+                <select>
+                    <option value="all">All</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="special">Special</option>
+                </select>
+                <select>
+                    <option value="benefits">Benefits</option>
+                </select>
+                <select>
+                    <option value="location">Location</option>
+                </select>
+            </div>
+            <div class="puja-cards">
+                <div class="puja-card">
+                    <img src="./assets/1720847450394.webp" alt="Puja 1">
+                    <h3>1008 Shiv Gayatri Mantra Jaap, Pradosh-Stotrashtakam and Pradosh Vrat Katha</h3>
+                    <p>For Resolving Conflicts in Relationships</p>
+                    <p>Location: Shri Omkareshwar Jyotirlinga Temple, Khandwa, Madhya Pradesh</p>
+                    <p>Date: 18 July, Thursday, Ashadha Shukla Dwadashi</p>
+                    <a href="./pujadetailspage.html" class="btn">Book Puja</a>
+                </div>
+                <div class="puja-card">
+                    <img src="./assets/1720850112827.webp" alt="Puja 2">
+                    <h3>Batuk Bhairav Stotra path and Tantra Yukta Havan</h3>
+                    <p>For Relief from Negative Energies, Evil Forces and Adversities in Life</p>
+                    <p>Location: Shri Batuk Bhairav Temple, Kashi, Varanasi</p>
+                    <p>Date: 18 July, Thursday, Ashadha Shukla Dwadashi</p>
+                    <a href="./pujadetailspage.html" class="btn">Book Puja</a>
+                </div>
+                <div class="puja-card">
+                    <img src="./assets/1720875578009.webp" alt="Puja 3">
+                    <h3>Mahakali Tantra Yukta Yagya and 1008 Laal Pushp Mahakali Yantra Abhishek</h3>
+                    <p>For Courage and Strength to Conquer Fear</p>
+                    <p>Location: Kali Mandir, Rudraprayag, Uttarakhand</p>
+                    <p>Date: 19 July, Friday, Ashadha Shukla Tryodashi</p>
+                    <a href="#" class="btn">Book Puja</a>
+                </div>
+                <div class="puja-card">
+                    <img src="./assets/1721208690418.webp" alt="Puja 4">
+                    <h3>Shani Saade Saati Peeda Shanti Mahapuja and Til Tel Abhishek</h3>
+                    <p>For Relief from Malefic Effects of Saturn</p>
+                    <p>Location: Shree Shaniadyo Temple, Shani Shingnapur, Maharashtra</p>
+                    <p>Date: 20 July, Saturday, Ashadha Shukla Chaturdashi</p>
+                    <a href="#" class="btn">Book Puja</a>
+                </div>
+                <div class="puja-card">
+                    <img src="./assets/1720883338524.webp" alt="Puja 5">
+                    <h3>Maa Bagulamukhi Tantra Yukta Havan</h3>
+                    <p>For Victory in Legal Matters and Overcoming Enemies</p>
+                    <p>Location: Maa Bagulamukhi Temple, Hariharpur, Madhya Pradesh</p>
+                    <p>Date: 20 July, Saturday, Ashadha Shukla Chaturdashi</p>
+                    <a href="#" class="btn">Book Puja</a>
+                </div>
+                <div class="puja-card">
+                    <img src="./assets/1720695475568.webp" alt="Puja 6">
+                    <h3>Divya Mahakali Tantrikota Havan</h3>
+                    <p>For Protection from Black Magic and Evil Spirits</p>
+                    <p>Location: Shaktipeeth Maha Kali Temple, Binnaguri, West Bengal</p>
+                    <p>Date: 20 July, Saturday, Ashadha Shukla Chaturdashi</p>
+                    <a href="#" class="btn">Book Puja</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

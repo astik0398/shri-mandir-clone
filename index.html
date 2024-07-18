@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic CSS for navbar */
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #fef5ec;
+          margin: 0;
+          padding: 0;
+        }
+        .navbar {
+          background-color: #ffffff;
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 40px 0px 40px;
+          align-items: center;
+          height: 80px;
+        }
+        .navbar a {
+          float: left;
+          display: block;
+          color: #000000;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          font-size: larger;
+        }
+        .navbar a:hover {
+          background-color: #ffffff;
+          color: #ff8b1e;
+          border-radius: 15px;
+        }
+        .navbar .logo {
+          float: left;
+          display: block;
+          padding: 10px;
+          margin-right: 10px;
+        }
+        .navbar .avatar {
+          float: right;
+          display: block;
+          padding: 10px;
+          margin-left: 10px;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          background-color: #dd0909;
+          cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+        .navbar .additional-menu {
+          display: none; /* Initially hide the additional menu */
+          position: absolute;
+          background-color: #fff;
+          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+          z-index: 1;
+          right: 10px;
+          top: 80px;
+        }
+        .navbar .additional-menu a {
+          float: none;
+          display: block;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          text-align: left;
+        }
+
+        /* CSS FOR SECTION TAG GOES HERE */
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 120px 50px 120px;
+        }
+        .section-container .text-side {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .section-container .text-side h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .section-container .text-side p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .section-container .image-side {
+            flex: 1;
+            text-align: center;
+        }
+        .section-container .image-side img {
+            width: 600px;
+            height: auto;
+        }
+      </style>
+</head>
+<body>
+    <div class="navbar">
+      <div>
+        <img src="./assets/Screenshot__1401_-removebg-preview.png" style="width: 200px;" alt="Logo" height="60">
+      </div>
+        <div>
+        <a href="#">Home</a>
+        <a href="#">Puja</a>
+        <a href="#">Panchang</a>
+        <a href="#">Temples</a>
+        <a href="#">Library</a>
+        </div>
+
+        <div>
+          <a href="#" class="avatar"></a>
+          <div class="additional-menu" id="additionalMenu">
+            <a style="font-size: small;" for=""> <b>Account Details</b></a>
+            <a href="#">My profile</a>
+            <a href="./pujabookingpage.html">My Puja Bookings</a>
+            <a href="#">My Ramotsav Bookings</a>
+            <a href="#">Book a Puja</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-container">
+        <div class="text-side">
+            <p style="font-size: larger; color: #837166;">WORLD’S LARGEST APP FOR HINDU DEVOTEES</p>
+            <h1 style="font-size: 40px; margin-top: -10px;">Pray daily with <span style="color: #ff8b1e;">Sri Mandir.</span><br>One App for all your <br><span style="color: #ff8b1e;">devotional</span> needs.</h1>
+            <div>
+              <img src="./assets/img_playstore_logo.svg" alt="" srcset="">
+              <img style="margin-left: 10px;" src="./assets/img_playstore_logo.svg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="image-side">
+            <img src="./assets/img_hero_artwork_en (2).webp" alt="Image Description">
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+  // JavaScript to show/hide additional menu
+  document.querySelector('.avatar').addEventListener('click', function() {
+      var menu = document.getElementById('additionalMenu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  });
+</script>

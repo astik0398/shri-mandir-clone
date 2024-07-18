@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puja Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-content {
+      display: flex;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .puja-image img {
+      width: 400px;
+      height: auto;
+    }
+
+    .puja-info {
+      padding-left: 20px;
+    }
+
+    .puja-info h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .puja-info p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .countdown-timer {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-around;
+      position: -webkit-sticky; /* For Safari */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .navigation a:hover {
+      background-color: #575757;
+    }
+
+    .main {
+      padding: 20px;
+    }
+
+    .about-puja,
+    .puja-benefits,
+    .puja-process,
+    .temple-details,
+    .puja-packages,
+    .past-puja-experience,
+    .testimonials,
+    .faq {
+      margin-bottom: 40px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 90%;
+      margin: auto;
+      font-size: larger;
+    }
+
+    .benefits-grid,
+    .packages-grid,
+    .past-puja-grid,
+    .testimonials-grid {
+      display: flex;
+      gap: 20px;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 20px;
+      width: 35%;
+      margin: auto;
+      padding: 15px;
+      font-size: larger;
+      height: 250px;
+    }
+    .benefit-item img {
+      margin-top: 20px;
+    }
+
+    .step {
+      margin: 10px;
+      padding: 15px;
+    }
+    .package,
+    .past-puja-item,
+    .testimonial {
+      flex: 1;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+    .benefit-item img,
+    .step img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .package h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .past-puja-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .testimonial p {
+      margin: 5px 0;
+    }
+
+    .faq-item h3 {
+      cursor: pointer;
+      background-color: #e9e9e9;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .faq-item p {
+      display: none;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="puja-image">
+          <img src="./assets/1720847462092.webp" alt="Puja Image" />
+        </div>
+        <div class="puja-info">
+          <h1>Rahu-Guru Shanti Special Guru Chandali Dosha Nivaran Mahapuja</h1>
+          <p>For Prosperity and Material Well-Being</p>
+          <p>At Shri Brihaspati Mandir, Kashi, Uttar Pradesh</p>
+          <p>Puja Booking will close in</p>
+          <div class="countdown-timer">
+            <span>11</span>h : <span>12</span>m : <span>27</span>s
+          </div>
+          <button class="btn btn-green">PARTICIPATE</button>
+        </div>
+      </div>
+      <nav class="navigation">
+        <a href="#about-puja">About Puja</a>
+        <a href="#puja-benefits">Benefits</a>
+        <a href="#puja-process">Process</a>
+        <a href="#temple-details">Temple Details</a>
+        <a href="#puja-packages">Packages</a>
+        <a href="#testimonials">Reviews</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about-puja" class="about-puja">
+        <h2>
+          Jyotirlinga Pradosh Special 1008 Shiv Gayatri Mantra Jaap,
+          Pradosh-Stotrashtakam and Pradosh Vrat Katha For Resolving Conflicts
+          in Relationships
+        </h2>
+        <p>
+          The Pradosh Vrat is considered extremely auspicious and is believed to
+          bestow the blessings of Lord Shiva in the Kali Yuga. This sacred
+          festival occurs twice a month on the Trayodashi Tithi, and on this
+          day, observing a fast (vrat) with utmost devotion and worshipping Lord
+          Shiva can lead to happiness, prosperity, and the attainment of wealth
+          in life. It is said that the significance of this vrat was first
+          explained by Lord Shiva to Mata Sati, according to which any devotee
+          who observes Pradosh Vrat can get the blessings of marital happiness
+          from Lord Shiva. According to scriptures, the worship of the twelve
+          Jyotirlingas is considered most significant for the worship of Lord
+          Shiva. It is said that worshipping the Jyotirlingas leads to the
+          attainment of eternal merit (akshay punya) for individuals. Among
+          them, the Omkareshwar Jyotirlinga in Madhya Pradesh is believed to be
+          where Lord Shiva daily plays the game of dice with Mata Parvati.
+          Hence, devotees believe that worshipping this Jyotirlinga can bestow
+          happiness and peace in marital life. The scriptures explain many
+          powerful mantras of Lord Shiva, including the Shiva Gayatri Mantra.
+          Reciting this mantra grants mental peace and positive energy to
+          individuals. On the day of Pradosh, chanting this mantra, reciting the
+          Pradosh Stotrashtakam and Pradosh Vrat Katha can give the complete
+          benefits of this fast. Therefore, participate in the 1008 Shiv Gayatri
+          Mantra Jaap, Pradosh-Stotrashtakam and Pradosh Vrat Katha at the Shri
+          Omkareshwar Jyotirlinga Temple in Madhya Pradesh through Sri Mandir
+          and receive the blessings of Lord Shiva and Maa Parvati.
+        </p>
+      </section>
+      <section id="puja-benefits" class="puja-benefits">
+        <h2>Puja Benefits</h2>
+        <div style="width: 90%; margin: auto" class="benefits-grid">
+          <div class="benefit-item">
+            <img src="./assets/1720835131634.webp" alt="Icon" />
+            <div>
+              <h4>Resolve Conflicts in Relationships</h4>
+              <p>
+                According to the scriptures, performing this puja on the day of
+                Pradosh Vrat leads to a blissful married life and resolves
+                marital problems.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <img src="./assets/1720848036442.webp" alt="Icon" />
+            <div>
+              <h4>For Marital Bliss</h4>
+              <p>
+                It is believed that performing this puja on the day of Pradosh
+                Vrat blesses couples with a happy married life through the grace
+                of Lord Shiva.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <img src="./assets/1719477492898.webp" alt="Icon" />
+            <div>
+              <h4>Relief from delays in marriage</h4>
+              <p>
+                According to astrologers, worshipping Lord Shiva and Mata
+                Parvati in their combined form on the day of Pradosh is highly
+                beneficial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="puja-process" class="puja-process">
+        <h2>Puja Process</h2>
+        <div class="process-steps">
+          <div class="step">
+            <h4>Select Puja</h4>
+            <p>Scroll down and select from 4 different Puja Package options.</p>
+          </div>
+          <div class="step">
+            <h4>Add Offerings</h4>
+            <p>
+              Offer Gau Seva, Vastra Daan, Deep Daan alongwith your Puja. Make
+              payment for Puja.
+            </p>
+          </div>
+          <div class="step">
+            <h4>Enter Sankalp details</h4>
+            <p>Enter your Name and Gotra.</p>
+          </div>
+          <div class="step">
+            <h4>On Puja Day</h4>
+            <p>
+              Experienced pandits will perform the Vedic Puja and updates will
+              be provided on your WhatsApp number.
+            </p>
+          </div>
+          <div class="step">
+            <h4>Puja Video and Teerth Prashad Delivery</h4>
+            <p>
+              Receive puja video in 4-5 days on your registered WhatsApp number.
+              Teerth Prasad is delivered within 8-10 days of the puja.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        style="width: 90%; margin: auto"
+        id="temple-details"
+        class="temple-details"
+      >
+        <h2>Shri Brihaspati Temple, Kashi, Uttar Pradesh</h2>
+        <div style="display: flex; gap: 35px">
+          <img
+            width="600px"
+            style="border-radius: 25px"
+            src="./assets/1720847522313.webp"
+            alt=""
+          />
+          <p style="font-size: larger;">
+            The fourth Jyotirlinga among the 12 Jyotirlingas of Lord Shiva is
+            Shri Omkareshwar Jyotirlinga, considered a Swayambhu lingam. It is
+            located in the Khandwa district of Madhya Pradesh on the island of
+            Mandhata or Shivpuri in the Narmada River. Here, the Jyotirlinga
+            exists in two forms. One is known as Mamleshwar and the other as
+            Omkareshwar. Mamleshwar is located a little distance away on the
+            southern bank of the Narmada from Omkareshwar. Despite being
+            separate, they are counted as one. The pronunciation of 'Omkar'
+            first emerged from the mouth of the creator Brahma. The recitation
+            of the Vedas also begins with 'Om'. It is believed that the Narmada
+            river itself flows here in the shape of 'Om'. According to
+            scriptures, merely visiting Omkareshwar Jyotirlinga can liberate one
+            from all sins. The glory of the Omkareshwar Kshetra is mentioned in
+            the Skanda Purana, Shiva Purana, and Vayu Purana. According to a
+            mythological story, Lord Shiva comes here to rest at night after
+            wandering through all the three worlds. It is said that this is the
+            only temple on earth where Shiva and Parvati play the game of dice
+            every night. After the Shayan Aarti at night, a dice board is set up
+            here, and the Garbhgriha is closed. Surprisingly, even though no one
+            can enter the temple at night, the dice are found scattered every
+            day. This fact further enhances the religious significance of this
+            temple. This is why after visiting all other pilgrimages, a visit
+            and worship at Omkareshwar holds special importance. Pilgrims bring
+            water from all other holy places to offer at Omkareshwar, only then
+            are all pilgrimages considered complete; otherwise, they are
+            considered incomplete.
+          </p>
+        </div>
+      </section>
+      <section id="puja-packages" class="puja-packages">
+        <h2>Select Puja Package</h2>
+        <div class="packages-grid">
+          <div class="package">
+            <h3>₹851</h3>
+            <p>Individual Puja</p>
+            <button class="btn btn-green">PARTICIPATE</button>
+          </div>
+          <div class="package">
+            <h3>₹1251</h3>
+            <p>Partner Puja</p>
+            <button class="btn btn-green">PARTICIPATE</button>
+          </div>
+          <div class="package">
+            <h3>₹2001</h3>
+            <p>Family + Bhog</p>
+            <button class="btn btn-green">PARTICIPATE</button>
+          </div>
+          <div class="package">
+            <h3>₹3001</h3>
+            <p>Joint Family + Bhog + Flower Basket</p>
+            <button class="btn btn-green">PARTICIPATE</button>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="testimonials">
+        <h2>What devotees say about Sri Mandir Puja?</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>"Very good puja experience..."</p>
+            <p>- Jai Raj Yadav, Delhi</p>
+          </div>
+          <div class="testimonial">
+            <p>"We are very happy..."</p>
+            <p>- Ramesh Chandra Bhatt, Jaipur</p>
+          </div>
+          <div class="testimonial">
+            <p>"I really like the whole process..."</p>
+            <p>- Aparna Mal, Puri</p>
+          </div>
+          <div class="testimonial">
+            <p>"Liked the fact that we can book puja online..."</p>
+            <p>- Shivraj Dobhi, Agra</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.querySelectorAll(".navigation a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
