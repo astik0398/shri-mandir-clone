@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Review Booking</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-                body {
+         body {
           font-family: Arial, sans-serif;
           background-color: #fef5ec;
           margin: 0;
@@ -49,8 +49,7 @@
           width: 30px;
           height: 30px;
           border: 2px solid #e6e7eb;
-          border-radius: 15px;
-          cursor: pointer; /* Add cursor pointer to indicate clickable */
+          border-radius: 15px;          cursor: pointer; /* Add cursor pointer to indicate clickable */
         }
         .navbar .additional-menu {
           display: none; /* Initially hide the additional menu */
@@ -70,38 +69,98 @@
           text-align: left;
         }
 
-        /* CSS for section goes here */
+        /* CSS after navbar goes here */
 
-        .puja-booking-container {
-            text-align: center;
-            padding: 50px;
-        }
-        .puja-booking-container img {
-            max-width: 100px;
-            margin-bottom: 20px;
-        }
-        .puja-booking-container h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .puja-booking-container p {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #666;
-        }
-        .puja-booking-container button {
-            background-color: #ff8b1e;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 20px;
-        }
-        .puja-booking-container button:hover {
-            background-color: #e0761a;
-        }
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    margin-top: 120px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.apply-coupon {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bill-details {
+    margin-top: 20px;
+}
+
+.bill-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.bill-item, .total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.bill-item p, .total-amount p {
+    margin: 0;
+}
+
+.continue-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.continue-button span {
+    font-weight: normal;
+}
+
     </style>
 </head>
 <body>
@@ -129,11 +188,29 @@
           </div>
         </div>
 
-        <section class="puja-booking-container" id="pujaBookingContainer">
-            <img src="./assets/empty_stack.svg" alt="Puja Booking Icon">
-            <h2>No Puja has been booked yet</h2>
-            <p>Book your Puja online at Popular Temples of India. <br>Panditji will take sankalp with your name and gotra <br> during the Puja.</p>
-            <button><a style="color: white; text-decoration: none;" href="./epuja.html">Book Pooja Now</a></button>
-        </section>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Jyotirlinga Pradosh Special 1008 Shiv Gayatri...</h2>
+                <p>Individual Puja</p>
+                <p class="price">₹ 851</p>
+            </div>
+            <button class="apply-coupon">Apply Coupon</button>
+        </div>
+
+        <div class="bill-details">
+            <h3>Bill details</h3>
+            <div class="bill-item">
+                <p>Individual Puja</p>
+                <p>₹ 851.0</p>
+            </div>
+            <div class="total-amount">
+                <p>Total Amount</p>
+                <p>₹ 851.0</p>
+            </div>
+        </div>
+        
+        <a style="text-decoration: none" href="./userdetailpage.html"><button class="continue-button">₹ 851 Individual Puja <span style="margin-left: 420px;">Continue →</span></button></a>
+    </div>
 </body>
 </html>
